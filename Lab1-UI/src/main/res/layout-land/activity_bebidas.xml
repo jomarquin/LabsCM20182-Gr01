@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".activity_bebidas">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imagenBebida_id"
+        android:layout_width="179dp"
+        android:layout_height="96dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nomBebida_id"
+        android:layout_width="198dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/nombre_bebida"
+        android:inputType="textCapWords"
+        app:layout_constraintStart_toEndOf="@+id/imagenBebida_id" />
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/precioBebida_id"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/precio_bebida"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/nomBebida_id"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/ingreBebidas_id"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/ingreBebidas"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/imagenBebida_id"
+        app:layout_constraintTop_toBottomOf="@+id/precioBebida_id" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precioBebida_id" />
+
+    <!--<Button
+        android:id="@+id/button3"
+        android:layout_width="117dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/seleccionar_imagen"
+        app:layout_constraintBottom_toTopOf="@+id/nomBebida_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenBebida_id"
+        app:layout_constraintTop_toTopOf="parent"
+        />-->
+
+
+</android.support.constraint.ConstraintLayout>

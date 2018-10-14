@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="co.edu.udea.compumovil.gr01_20182.lab1.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione una opción"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/id_comidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Comidas"
+        android:textSize="30dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/id_bebidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bebidas"
+        android:textSize="30dp"
+        android:layout_weight="1"/>
+</LinearLayout>
