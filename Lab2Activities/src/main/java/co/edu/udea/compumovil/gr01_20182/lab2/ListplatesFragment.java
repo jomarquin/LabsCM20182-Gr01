@@ -151,22 +151,9 @@ public class ListplatesFragment extends Fragment {
                 plate.setpImage(R.drawable.pollo_broaster);
                 plate.setpImageDetail(R.drawable.pollo_asado);
             }
-
-
             listPlate.add(plate);
-
-
         }
-
     }
-
-    /**private void fillPlatesList() {
-        listPlate.add(new Plate("Pollo Asado", "Pollo", "Precio: 15000", "Tiempo Prep: 10 min", R.mipmap.pollo_asado));
-        listPlate.add(new Plate("Pollo Broaster", "Pollo", "Precio: 20000", "Tiempo Prep: 10 min", R.mipmap.pollo_broaster));
-        listPlate.add(new Plate("Pollo al Curry", "Pollo", "Precio: 22000", "Tiempo Prep: 15 min", R.mipmap.pollo_al_curry));
-        listPlate.add(new Plate("Pollo a la Plancha", "Pollo", "Precio: 18000", "Tiempo Prep: 15 min", R.mipmap.pollo_a_la_plancha));
-        listPlate.add(new Plate("Nuggets de Pollo", "Pollo", "Precio: 12000", "Tiempo Prep: 10 min", R.mipmap.nuggets_de_pollo));
-    }*/
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
