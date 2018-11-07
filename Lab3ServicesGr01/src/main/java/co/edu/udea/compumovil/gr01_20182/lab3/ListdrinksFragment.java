@@ -17,7 +17,6 @@ import java.util.ArrayList;
 
 import co.edu.udea.compumovil.gr01_20182.lab3.Adapters.DrinkAdapter;
 import co.edu.udea.compumovil.gr01_20182.lab3.Entities.Drink;
-import co.edu.udea.compumovil.gr01_20182.lab3.Entities.Plate;
 import co.edu.udea.compumovil.gr01_20182.lab3.Utilities.Utilities;
 
 

@@ -1,0 +1,3 @@
+Cerveza;null;8,95;https://wongfood.vteximg.com.br/arquivos/ids/166439-1000-1000/frontal.jpg?v=636415963792700000
+Vino;Es imposible decir cuál es el momento ideal para abrir el vino sin haberlo probado antes. Lo ideal sería comprar dos botellas iguales, tomar una en el momento y otra abrirla años después, para ver cómo evolucionó;12,95;https://images.clarin.com/2018/04/05/SJwsc1ViM_930x525__1.jpg
+Jugos naturales;Ricos en Vitaminas, Minerales y Potasio. Las frutas y verduras recién exprimidas son uno de los alimentos más nutritivos que podés incluir en la dieta. ... Y los cítricos, kiwi, frutilla y verduras de hojas verde encabezan las legiones antioxidantes.;7,95;https://mejorconsalud.com/wp-content/uploads/2015/09/jugos-para-tomar-en-ayunas-500x339.jpg

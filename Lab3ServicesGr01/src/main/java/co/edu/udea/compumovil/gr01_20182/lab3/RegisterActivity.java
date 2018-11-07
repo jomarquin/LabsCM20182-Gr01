@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import co.edu.udea.compumovil.gr01_20182.lab3.Utilities.Utilities;

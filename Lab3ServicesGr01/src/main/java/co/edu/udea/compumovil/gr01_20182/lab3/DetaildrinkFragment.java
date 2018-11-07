@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import co.edu.udea.compumovil.gr01_20182.lab3.Entities.Drink;
-import co.edu.udea.compumovil.gr01_20182.lab3.Entities.Plate;
 
 
 /**

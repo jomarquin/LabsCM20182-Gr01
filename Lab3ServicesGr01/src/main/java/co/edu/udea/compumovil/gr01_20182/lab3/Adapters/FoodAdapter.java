@@ -8,10 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import co.edu.udea.compumovil.gr01_20182.lab3.Entities.Food;
-import co.edu.udea.compumovil.gr01_20182.lab3.Entities.Plate;
 import co.edu.udea.compumovil.gr01_20182.lab3.R;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodsViewHolder> implements  View.OnClickListener{

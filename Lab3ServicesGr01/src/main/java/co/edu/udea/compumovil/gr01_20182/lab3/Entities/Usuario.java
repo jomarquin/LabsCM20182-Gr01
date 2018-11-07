@@ -1,7 +1,5 @@
 package co.edu.udea.compumovil.gr01_20182.lab3.Entities;
 
-import android.media.Image;
-
 public class Usuario {
 
     private String email;

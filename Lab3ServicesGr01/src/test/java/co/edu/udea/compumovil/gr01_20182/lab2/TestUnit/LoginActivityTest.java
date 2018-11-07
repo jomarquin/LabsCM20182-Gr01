@@ -1,13 +1,10 @@
-package co.edu.udea.compumovil.gr01_20182.lab3.TestUnit;
+package co.edu.udea.compumovil.gr01_20182.lab4.TestUnit;
 
 import android.widget.EditText;
 
 import org.junit.Test;
 
-import co.edu.udea.compumovil.gr01_20182.lab3.LoginActivity;
-import co.edu.udea.compumovil.gr01_20182.lab3.R;
-
-import static org.junit.Assert.*;
+import co.edu.udea.compumovil.gr01_20182.lab4.LoginActivity;
 
 public class LoginActivityTest {
 

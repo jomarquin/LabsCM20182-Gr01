@@ -20,19 +20,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="co.edu.udea.compumovil.gr01_20182.lab3.MainAcivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SplashActivity">
+        <activity android:name="co.edu.udea.compumovil.gr01_20182.lab4.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name="co.edu.udea.compumovil.gr01_20182.lab3.StartActivity" />
+        <activity android:name="co.edu.udea.compumovil.gr01_20182.lab3.RegisterActivity" />
+        <activity android:name="co.edu.udea.compumovil.gr01_20182.lab3.LoginActivity" />
         <service
             android:name="co.edu.udea.compumovil.gr01_20182.lab3.UpdateDatabaseIntentService"
             android:enabled="true"
@@ -42,7 +42,7 @@
             android:enabled="true"
             android:exported="true"></service>
         <receiver
-            android:name="co.edu.udea.compumovil.gr01_20182.lab3.UpdateReceiver"
+            android:name="co.edu.udea.compumovil.gr01_20182.lab4.UpdateReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

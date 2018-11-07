@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "123728816656",
+    "firebase_url": "https://maxipollo-app.firebaseio.com",
+    "project_id": "maxipollo-app",
+    "storage_bucket": "maxipollo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123728816656:android:c24c00a49a5fa0a6",
+        "android_client_info": {
+          "package_name": "co.edu.udea.compumovil.gr01_20182.lab4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123728816656-ubiu2s2948u3u7bokt2ov8c8oqeib4db.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.udea.compumovil.gr01_20182.lab4",
+            "certificate_hash": "5099adc0d8230a393128eec17f4080bbfd888201"
+          }
+        },
+        {
+          "client_id": "123728816656-sccat9l48d0kge28vju32mjhstd7uf3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIqzGPUo3us6iMHjZXpkQZVLbakiFdjs8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123728816656-sccat9l48d0kge28vju32mjhstd7uf3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
