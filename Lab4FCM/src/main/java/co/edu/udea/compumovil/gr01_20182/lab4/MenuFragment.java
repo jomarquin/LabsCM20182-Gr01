@@ -3,14 +3,11 @@ package co.edu.udea.compumovil.gr01_20182.lab4;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-import com.android.volley.Response;
 
 
 /**
@@ -73,13 +70,12 @@ public class MenuFragment extends Fragment {
         view=inflater.inflate(R.layout.fragment_menu, container, false);
 
         btnPlates=view.findViewById(R.id.id_comidas);
-
-
         btnPlates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Fragment miFrag = new ComidasFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_main, miFrag).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_main, miFrag).addToBackStack(null).commit();
 
             }
         });

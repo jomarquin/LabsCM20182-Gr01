@@ -3,11 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_nav"
     tools:context=".ListdrinksFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/id_recycler_drinks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/id_btn_reportarExtraviado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#F31414"
+        android:textColor="@color/colorWhite"
+        android:text="Reportar Mascota Extraviada"
+        android:drawableLeft="@android:drawable/ic_menu_edit"/>
 
 </FrameLayout>

@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
                 fieldName.setText("");
                 fieldEmail.setText("");
                 fieldPassword.setText("");
-                imageProfile.setImageResource(R.drawable.no_image);
+                imageProfile.setImageResource(R.drawable.sin_imagen);
 
                 Toast.makeText(this, "Usuario Registrado Correctamente", Toast.LENGTH_LONG).show();
             } else {

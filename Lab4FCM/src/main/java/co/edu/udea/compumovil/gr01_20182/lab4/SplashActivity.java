@@ -1,12 +1,9 @@
 package co.edu.udea.compumovil.gr01_20182.lab4;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.CheckBox;
-
-import co.edu.udea.compumovil.gr01_20182.lab4.Utilities.Utilities;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -15,6 +12,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        getSupportActionBar().hide(); //Hide the ActionBar
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -23,6 +21,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },1500);
+        },3000);
     }
 }

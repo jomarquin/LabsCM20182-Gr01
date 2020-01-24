@@ -1,10 +1,7 @@
 package co.edu.udea.compumovil.gr01_20182.lab4;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -17,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -28,8 +26,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import co.edu.udea.compumovil.gr01_20182.lab4.Entities.Food;
-import co.edu.udea.compumovil.gr01_20182.lab4.Entities.Usuario;
-import co.edu.udea.compumovil.gr01_20182.lab4.Utilities.Utilities;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -49,8 +45,9 @@ public class ComidasFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     View view;
+    Spinner spinnerEspecie;
     EditText fieldName, fieldPrice, fieldTime, fieldDescrip;
-    Button btnRegister, btnLoadImgFood;
+    Button btnRegister, btnLoadImgFood, btnMaps;
     RadioButton rb_plateIn, rb_plateStrong;
     ImageView imgFood;
     String path_uri;
@@ -101,14 +98,12 @@ public class ComidasFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_comidas, container, false);
+        view=inflater.inflate(R.layout.frag_insert_found, container, false);
 
         fieldName = view.findViewById(R.id.id_name_plate);
         fieldDescrip = view.findViewById(R.id.textoDescripcion_id);
-        fieldPrice = view.findViewById(R.id.id_price_plate);
+        spinnerEspecie = view.findViewById(R.id.id_price_plate);
         fieldTime = view.findViewById(R.id.timePreparacion_id);
-        rb_plateIn= view.findViewById(R.id.RB_Entrada);
-        rb_plateStrong=view.findViewById(R.id.RB_PlatoFuerte);
         imgFood = view.findViewById(R.id.imagenComida_id);
 
         storageRef = FirebaseStorage.getInstance().getReference();
@@ -127,6 +122,16 @@ public class ComidasFragment extends Fragment {
             public void onClick(View v) {
                 loadImage();
             }
+
+        });
+
+        btnMaps = view.findViewById(R.id.btnImgFood2);
+        btnMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+
         });
 
         return view;
@@ -137,6 +142,11 @@ public class ComidasFragment extends Fragment {
         intent.setType("image/");//si hay problemas para cargar algunas imagenes colocar "image/*"
         startActivityForResult(intent.createChooser(intent, "Seleccione una aplicación"), 10);
     }
+
+    //private void VerMapa() {
+        //Intent maps = new Intent(getActivity(), MapsActivity.class);
+        //startActivity(maps);
+    //}
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -261,7 +271,7 @@ public class ComidasFragment extends Fragment {
             fieldDescrip.setText("");
             fieldTime.setText("");
             fieldPrice.setText("");
-            imgFood.setImageResource(R.drawable.no_image);
+            imgFood.setImageResource(R.drawable.sin_imagen);
 
             //displaying a success toast
             Toast.makeText(getContext(), "Comida Registrada", Toast.LENGTH_SHORT).show();

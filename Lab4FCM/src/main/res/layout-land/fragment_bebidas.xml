@@ -12,7 +12,7 @@
         android:layout_width="179dp"
         android:layout_height="131dp"
         android:layout_marginTop="36dp"
-        android:src="@drawable/no_image"
+        android:src="@drawable/sin_imagen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

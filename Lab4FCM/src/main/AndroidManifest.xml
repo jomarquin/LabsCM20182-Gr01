@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="co.edu.udea.compumovil.gr01_20182.lab4">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -15,12 +22,24 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_maxi2"
+        android:appComponentFactory="whateverString"
+        android:icon="@mipmap/ic_launcher_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_maxi2"
+        android:roundIcon="@mipmap/ic_launcher_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:appComponentFactory">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -60,9 +79,7 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseMessagingService" />
-
-        <!-- <activity android:name=".LoginGoogleActivity"></activity> -->
+        <service android:name=".MyFirebaseMessagingService" /> <!-- <activity android:name=".LoginGoogleActivity"></activity> -->
         <activity android:name=".ProfileGoogleActivity" />
 
         <receiver android:name=".FoodWidget">
@@ -70,9 +87,9 @@
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
-            <meta-data
+            <!--meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/food_widget_info" />
+                android:resource="@xml/food_widget_info" /-->
         </receiver>
     </application>
 

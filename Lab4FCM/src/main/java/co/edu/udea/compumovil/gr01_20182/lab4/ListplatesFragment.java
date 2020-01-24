@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,7 +26,6 @@ import java.util.ArrayList;
 
 import co.edu.udea.compumovil.gr01_20182.lab4.Adapters.FoodAdapter;
 import co.edu.udea.compumovil.gr01_20182.lab4.Entities.Food;
-import co.edu.udea.compumovil.gr01_20182.lab4.Entities.Plate;
 import co.edu.udea.compumovil.gr01_20182.lab4.Utilities.Utilities;
 
 
@@ -52,6 +52,7 @@ public class ListplatesFragment extends Fragment {
     ImageView imageView;
     RecyclerView recyclerListPlates;
     ArrayList<Food> ListFood;
+    Button btnFltFound;
     //Comunicación entre fragments
     Activity activity;
     IComunicaFragments interfaceComunicaFragments;
@@ -103,9 +104,23 @@ public class ListplatesFragment extends Fragment {
         recyclerListPlates=view.findViewById(R.id.id_recycler_plates);
         recyclerListPlates.setLayoutManager(new LinearLayoutManager(getContext()));
 
+
+        Button repFound = view.findViewById(R.id.id_btn_reportarEncontrado);
+        repFound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment miFrag = new ComidasFragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_main, miFrag).addToBackStack(null).commit();
+            }
+        });
+
         consultListFoods();
+
         return view;
     }
+
+
 
     private void consultListFoods() {
 

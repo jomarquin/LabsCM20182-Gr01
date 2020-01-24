@@ -1,9 +1,7 @@
 package co.edu.udea.compumovil.gr01_20182.lab4;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -26,8 +24,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import co.edu.udea.compumovil.gr01_20182.lab4.Entities.Drink;
-import co.edu.udea.compumovil.gr01_20182.lab4.Entities.Food;
-import co.edu.udea.compumovil.gr01_20182.lab4.Utilities.Utilities;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -235,7 +231,7 @@ public class BebidasFragment extends Fragment {
             fieldName.setText("");
             fieldDescrip.setText("");
             fieldPrice.setText("");
-            imgDrink.setImageResource(R.drawable.no_image);
+            imgDrink.setImageResource(R.drawable.sin_imagen);
 
             //displaying a success toast
             Toast.makeText(getContext(), "Bebida Registrada Correctamente", Toast.LENGTH_SHORT).show();

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_nav"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ListplatesFragment">
 
@@ -11,15 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/id_btnFloating_found"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/id_btn_reportarEncontrado"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp">
-
-    </android.support.design.widget.FloatingActionButton>
+        android:layout_gravity="bottom"
+        android:background="#F31414"
+        android:textColor="@color/colorWhite"
+        android:text="Reportar Mascota Encontrada"
+        android:drawableLeft="@android:drawable/ic_menu_edit"/>
 
 
 </FrameLayout>

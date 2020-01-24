@@ -8,9 +8,8 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,13 +19,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
-import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -45,7 +37,7 @@ public class MainActivity extends AppCompatActivity
         MenuFragment.OnFragmentInteractionListener, BebidasFragment.OnFragmentInteractionListener,
         IComunicaFragments, DetailplateFragment.OnFragmentInteractionListener, DetaildrinkFragment.OnFragmentInteractionListener,
         EditprofileFragment.OnFragmentInteractionListener, SearchView.OnQueryTextListener,
-        SearchDrinkFragment.OnFragmentInteractionListener, SearchFoodFragment.OnFragmentInteractionListener {
+        SearchDrinkFragment.OnFragmentInteractionListener, SearchFoodFragment.OnFragmentInteractionListener, ContainerswipeFragment.OnFragmentInteractionListener {
 
     /**
      * Johan Martinez
@@ -65,26 +57,33 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //initFoods();
-        //initDrinks();
-        Toast.makeText(getApplicationContext(), "Actualizando Database...", Toast.LENGTH_SHORT).show();
-        intent = new Intent(this, UpdateDatabaseIntentService.class);
-        //startService(intent);
-
-        menuFragment = new MenuFragment();
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.content_main, menuFragment)
-                .addToBackStack(null).commit();
-
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
+        /**Bandera para mantener la misma vista al rotar el dispositivo*/
+        if (Utilities.validaPantalla){
+             Fragment miFragment = new ContainerswipeFragment();
+             getSupportFragmentManager().beginTransaction()
+             .replace(R.id.content_main, miFragment)
+             .addToBackStack(null).commit();
+             Utilities.validaPantalla=false;
+         }
+
+
+        /**
+        //initFoods();
+        //initDrinks();
+        Toast.makeText(getApplicationContext(), "Actualizando Database...", Toast.LENGTH_SHORT).show();
+        intent = new Intent(this, UpdateDatabaseIntentService.class);
+        //startService(intent);*/
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        //navigationView.setBackgroundColor(getResources().getColor(R.color.colorPrimarySoft)); //color de fondo del nav_drawer
         navigationView.setItemIconTintList(null);
 
     }
@@ -273,10 +272,6 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.nav_searchDrink) {
             miFragment = new SearchDrinkFragment();
             fragmentSelected = true;
-        }else if (id == R.id.nav_update) {
-            Toast.makeText(getApplicationContext(), "Actualizando Database...", Toast.LENGTH_SHORT).show();
-            intent = new Intent(this, UpdateDatabaseIntentService.class);
-            startService(intent);
         }else if (id == R.id.nav_closeSession) {
             SharedPreferences preferences1 = this.getApplication().getSharedPreferences("credentials", getApplicationContext().MODE_PRIVATE);
             String usrSesion = preferences1.getString("user_sesion", "No existe la información");
@@ -298,7 +293,8 @@ public class MainActivity extends AppCompatActivity
             miFragment=new AboutFragment();
             fragmentSelected=true;
         } else if (id == R.id.nav_menu) {
-            miFragment=new MenuFragment();
+            //miFragment=new MenuFragment();
+            miFragment=new ContainerswipeFragment();
             fragmentSelected=true;
         }
             if (fragmentSelected==true){

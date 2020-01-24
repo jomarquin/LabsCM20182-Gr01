@@ -47,7 +47,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.DrinksViewHo
         String url = listDrinks.get(position).getImage();
         Glide.with(mContext)
                 .load(url)
-                .placeholder(R.drawable.no_image)
+                .placeholder(R.drawable.sin_imagen)
                 .into(holder.foto);
     }
 

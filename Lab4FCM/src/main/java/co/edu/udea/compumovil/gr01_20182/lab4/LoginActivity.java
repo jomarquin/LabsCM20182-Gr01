@@ -25,6 +25,7 @@ import co.edu.udea.compumovil.gr01_20182.lab4.Utilities.Utilities;
 public class LoginActivity extends AppCompatActivity {
 
     Button login;
+    Button register_email;
     EditText fieldName, fieldEmail, fieldPassword;
     private static final String TAG = "MyActivity";
 
@@ -37,11 +38,21 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().hide(); //Hide the ActionBar
 
         fieldEmail = findViewById(R.id.id_editText_loginEmail);
         fieldPassword = findViewById(R.id.id_editText_loginPass);
 
         ListUser=new ArrayList<>();
+
+        register_email = findViewById(R.id.btn_register_email);
+        register_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent register = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(register);
+            }
+        });
 
         login = findViewById(R.id.email_sign_in_button);
         login.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +80,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (loginUser){
                     Intent login = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(login);
+                    //Aca cambié para cuando se loguee muestre las tabs
+                    /**Fragment miFragment = new ContainerswipeFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_main, miFragment)
+                            .addToBackStack(null).commit();*/
                 }else{
                     Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrecto",
                             Toast.LENGTH_SHORT).show();

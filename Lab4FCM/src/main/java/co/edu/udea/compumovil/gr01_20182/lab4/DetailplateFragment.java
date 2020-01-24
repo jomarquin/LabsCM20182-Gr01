@@ -87,13 +87,13 @@ public class DetailplateFragment extends Fragment {
             food = (Food) objectPlate.getSerializable("objeto");
 
             txtName.setText(food.getName());
-            txtDescrip.setText("Descripción del Plato: "+food.getDescription());
-            txtType.setText("Tipo de Comida: "+food.getType());
-            txtPrice.setText("Precio: $"+food.getPrice());
-            txtTime.setText("Tiempo de preparación: "+food.getTime()+" min.");
+            txtDescrip.setText("Descripción: "+food.getDescription());
+            txtType.setText("Donde se estravió: "+food.getType());
+            txtPrice.setText("Sector: "+food.getPrice());
+            txtTime.setText("Hace: "+food.getTime()+" días");
             Glide.with(getContext())
                     .load(food.getImage())
-                    .placeholder(R.drawable.no_image)
+                    .placeholder(R.drawable.sin_imagen)
                     .into(imgDetail);
 
         }

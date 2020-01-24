@@ -4,35 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/side_nav_bar"
+
+    android:background="#ffffff"
     android:padding="16dp"
     tools:context="co.edu.udea.compumovil.gr01_20182.lab4.SplashActivity">
-
+    <!--android:background="@drawable/side_nav_bar"-->
     <ImageView
 
         android:id="@+id/ImageSplash"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:elevation="@dimen/nav_header_height"
         android:src="@mipmap/ic_launcher_maxi2" />
 
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/mensajeIntro_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="MaxiPollo... Lo mejor del pollo"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorLetter"
-        android:elevation="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
-        />
 </RelativeLayout>

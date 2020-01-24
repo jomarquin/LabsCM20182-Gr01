@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Lab1-UI/Lab1-UI.iml" filepath="$PROJECT_DIR$/Lab1-UI/Lab1-UI.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab2Activities/Lab2Activities.iml" filepath="$PROJECT_DIR$/Lab2Activities/Lab2Activities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab3ServicesGr01/Lab3ServicesGr01.iml" filepath="$PROJECT_DIR$/Lab3ServicesGr01/Lab3ServicesGr01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab4FCM/Lab4FCM.iml" filepath="$PROJECT_DIR$/Lab4FCM/Lab4FCM.iml" />
       <module fileurl="file://$PROJECT_DIR$/LabsCM20182-Gr01.iml" filepath="$PROJECT_DIR$/LabsCM20182-Gr01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lab3ServicesGr01/lab3servicesgr01.iml" filepath="$PROJECT_DIR$/Lab3ServicesGr01/lab3servicesgr01.iml" />
     </modules>
   </component>
 </project>

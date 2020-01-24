@@ -13,12 +13,13 @@ public class StartActivity extends AppCompatActivity {
     Button register;
     Button login;
     Button login_google;
-    Button exit;
+    //Button exit;  //botón para salir de la aplicación
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+        getSupportActionBar().hide(); //Hide the ActionBar
 
 
         SharedPreferences preferences = this.getApplication().getSharedPreferences("credentials", getApplicationContext().MODE_PRIVATE);
@@ -32,7 +33,7 @@ public class StartActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-        register = findViewById(R.id.id_BtnRegister);
+        register = findViewById(R.id.id_BtnFacebook);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +42,7 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
-        login = findViewById(R.id.id_BtnLogin);
+        login = findViewById(R.id.id_BtnMail);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +51,7 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
-        login_google = findViewById(R.id.id_BtnLoginGoogle);
+        login_google = findViewById(R.id.id_BtnGoogle);
         login_google.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,13 +60,13 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
-        exit = findViewById(R.id.id_BtnExit);
-        exit.setOnClickListener(new View.OnClickListener() {
+        //exit = findViewById(R.id.id_BtnExit);
+        /*exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
-        });
+        });**/
     }
 
 }

@@ -49,7 +49,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodsViewHolde
         String url = listFoods.get(position).getImage();
         Glide.with(mContext)
                 .load(url)
-                .placeholder(R.drawable.no_image)
+                .placeholder(R.drawable.sin_imagen)
                 .into(holder.foto);
 
     }

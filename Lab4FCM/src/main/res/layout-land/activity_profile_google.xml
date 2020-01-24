@@ -32,7 +32,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
-            android:src="@drawable/no_image" />
+            android:src="@drawable/sin_imagen" />
 
         <TextView
             android:id="@+id/nameTextView"

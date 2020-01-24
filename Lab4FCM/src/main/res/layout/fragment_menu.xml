@@ -22,8 +22,8 @@
         android:layout_height="74dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:textSize="20sp"
-        android:text="Seleccione una opción" />
+        android:text="Seleccione una opción"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/id_comidas"

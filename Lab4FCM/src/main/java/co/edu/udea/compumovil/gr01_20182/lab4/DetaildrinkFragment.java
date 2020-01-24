@@ -89,7 +89,7 @@ public class DetaildrinkFragment extends Fragment {
             txtPrice.setText("Precio: $"+drink.getPrice());
             Glide.with(getContext())
                     .load(drink.getImage())
-                    .placeholder(R.drawable.no_image)
+                    .placeholder(R.drawable.sin_imagen)
                     .into(imgDetail);
         }
         return view;
